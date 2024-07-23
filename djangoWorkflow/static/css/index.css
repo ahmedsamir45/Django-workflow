@@ -1,0 +1,27 @@
+
+.welcome{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 10px;
+    flex-wrap: wrap;
+}
+.welcome p{
+    width: 500px;
+}
+
+img{
+    width: 300px;
+}
+.btn{
+    background-color: white;
+    padding: 10px;
+    margin: 20px auto;
+    width: fit-content;
+    display: block;
+    border-radius: 20px;
+    color: black;
+}

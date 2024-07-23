@@ -1,8 +1,17 @@
 {% extends "base.html" %}
 {% load static %}
+
+{% block static %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+
 {% block content %}
-    <h1 style="text-align: center;">some information</h1>
-    <h2 style="text-align: center;">name: {{name}}</h2>
-    <h2 style="text-align: center;">age: {{age}}</h2>
-    <img src="{% static 'images/team-07.jpg'%}" alt="">
-{% endblock  %}
+<div class="welcome">
+    <img src="{% static 'images/products.jpeg' %}" alt="Products">
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam voluptates nam eaque quia officia omnis
+        mollitia incidunt dolore soluta deserunt!
+    </p>
+</div>
+<a href="{% url 'products' %}" class="btn">view</a>
+{% endblock %}

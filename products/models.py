@@ -1,10 +1,11 @@
 from django.db import models
-from datetime import datetime
+
 # Create your models here.
 class Product(models.Model):
     x = [
-        ("cat","cat"),
-        ("dog","dog")
+        ("phone","phone"),
+        ("tab","tab"),
+        ("labtop","labtop"),
     ]
     name = models.CharField(max_length=50)
     content = models.TextField()
@@ -16,10 +17,6 @@ class Product(models.Model):
         return self.name
     
     class Meta:
-        verbose_name="name"
+        verbose_name="device"
         ordering=["price"]
 
-class Test(models.Model):
-    date = models.DateField()
-    time = models.TimeField(null=True)
-    created = models.DateTimeField(default=datetime.now)

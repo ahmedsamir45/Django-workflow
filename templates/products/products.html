@@ -1,11 +1,28 @@
 {% extends "base.html" %}
+{% load static %}
 
+{% block static %}
+<link rel="stylesheet" href="{% static 'css/products.css' %}">
+{% endblock %}
 {% block content %}
 <h1>products</h1>
+{% if pro|length == 0 %}
+<div class="products">
+   <p>Product doesn't exist yet</p>
+</div>
+{% else %}
+<div class="products">
+
 {% for product in pro %}
-   <h2>{{product.name}}</h2>
-   <h3>{{product.content}}</h3>
-   <h4>{{product.price}}</h4>
-   <img src="{{product.image.url}}" alt="">
-{% endfor %}
+   <div class="product">
+      <h2 class="name">{{product.name}}</h2>
+      <img src="{{product.image.url}}" alt="">
+      <h3 class="content">{{product.content}}</h3>
+      <h4 class="price">{{product.price}}</h4>
+   </div>
+   {% endfor %}
+</div>
+{% endif %}
+
+
 {% endblock content %}

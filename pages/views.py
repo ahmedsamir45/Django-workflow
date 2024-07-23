@@ -1,23 +1,20 @@
 from django.shortcuts import render
-from .models import Login
-from .forms import LoginForm
+from .models import Contact
+from .forms import ContactForm
 # Create your views here.
 
 def index(request):
-    x = {
-        "name":"ali",
-        "age": 20,
-    }
-    return render(request,"pages/index.html",x) 
+
+    return render(request,"pages/index.html") 
 
 def about(request):
     if request.method == "POST":
         username = request.POST.get("username")
-        password = request.POST.get("password")
+        text = request.POST.get("text")
 
         # Validate the form data
-        if username and password:
-            data = Login(username=username, password=password)
+        if username and text:
+            data = Contact(username=username, text=text)
    
             data.save()
-    return render(request,"pages/about.html",{"form":LoginForm}) 
+    return render(request,"pages/about.html",{"form":ContactForm}) 

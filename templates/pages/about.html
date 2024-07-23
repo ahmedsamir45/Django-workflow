@@ -1,10 +1,25 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block static %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
 
 {% block content %}
-<form method="POST">
-    {% csrf_token %}
-    {{form}}
-    <input type="submit" value="save">
-</form>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Tempore quam obcaecati ipsum excepturi libero nobis, facere
+        dolor rerum quo, vel perferendis ullam cumque?
+        Inventore atque reiciendis nam, aut error reprehenderit.
+    </p>
+    <div class="contact">
+        <h2>contact us</h2>
+        <form method="POST">
+            {% csrf_token %}
+            {{form}}
+            <input type="submit" value="send">
+        </form>
+    </div>
+
 
 {% endblock content %}

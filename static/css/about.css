@@ -1,0 +1,40 @@
+
+h2{
+    background-color: white;
+    width: fit-content;
+    padding: 10px;
+    margin: 20px auto;
+    border-radius: 20px;
+}
+p{
+    width: 80%;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+}
+.contact  form  {
+    background-color: white;
+    padding: 20px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+    margin: 20px auto;
+    border-radius: 20px;
+}
+.contact  form  input, textarea{
+    background-color: #eee;
+}
+.contact  form > div{
+    margin-bottom: 20px;
+}
+.contact  form > div:first-of-type input,
+.contact  form > div textarea{
+    padding: 10px;
+    width: 100%;
+    border: none;
+    outline: none;
+}
